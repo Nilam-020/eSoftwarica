@@ -34,7 +34,7 @@ class HomeFragment : Fragment() {
         recyclerView = root.findViewById(R.id.recyclerView)
         loadStudents()
         val adapter = StudentAdapter(lstStudents, container!!.context)
-        recyclerView.layoutManager = LinearLayoutManager(container!!.context)
+        recyclerView.layoutManager = LinearLayoutManager(container.context)
         recyclerView.adapter = adapter
         return root
     }

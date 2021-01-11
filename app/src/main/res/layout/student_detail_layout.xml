@@ -3,53 +3,69 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="#315463"
-    android:layout_height="match_parent">
+    android:background="@drawable/custom_student"
+
+    android:layout_margin="10dp"
+    android:padding="5dp"
+    android:layout_height="wrap_content">
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/studentImage"
-        android:layout_width="149dp"
-        android:layout_height="133dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginLeft="48dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="4dp"
         android:src="@drawable/ic_person_24px"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tvStudentName"
+        style="@style/studentInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="4dp"
         android:text="Student Name"
-        style="@style/studentInfo"
         app:layout_constraintStart_toEndOf="@+id/studentImage"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tvStudentAge"
+        android:id="@+id/textView"
+        style="@style/studentInfoAge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Gender"
+        app:layout_constraintStart_toEndOf="@+id/tvStudentAge"
+        app:layout_constraintTop_toBottomOf="@+id/tvStudentName" />
+
+    <TextView
+        android:id="@+id/tvStudentAge"
+        style="@style/studentInfoAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
         android:layout_marginTop="8dp"
         android:text="Age"
-        style="@style/studentInfo"
         app:layout_constraintStart_toEndOf="@+id/studentImage"
         app:layout_constraintTop_toBottomOf="@+id/tvStudentName" />
 
     <TextView
         android:id="@+id/tvAddress"
+        style="@style/studentInfoAge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="4dp"
         android:text="Address"
         android:textColor="#ffffff"
-        style="@style/studentInfo"
         app:layout_constraintStart_toEndOf="@+id/studentImage"
         app:layout_constraintTop_toBottomOf="@+id/tvStudentAge" />
 
@@ -57,28 +73,30 @@
         android:id="@+id/btnDelete"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
         android:background="@drawable/ic_baseline_delete_24"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/tvStudentName"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.138" />
 
     <TextView
         android:id="@+id/tvEdit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:background="@drawable/custom_edit_button"
-        android:paddingHorizontal="20dp"
-        android:paddingVertical="4dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/edit_button"
+        android:paddingHorizontal="30dp"
+        android:paddingVertical="6dp"
         android:text="Edit"
         android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.85"
+        app:layout_constraintHorizontal_bias="0.894"
         app:layout_constraintStart_toEndOf="@+id/tvStudentAge"
         app:layout_constraintTop_toBottomOf="@+id/btnDelete" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
