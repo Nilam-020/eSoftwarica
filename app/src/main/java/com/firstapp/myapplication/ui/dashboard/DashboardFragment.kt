@@ -13,6 +13,7 @@ import com.firstapp.myapplication.R
 class DashboardFragment : Fragment() {
 
     private lateinit var dashboardViewModel: DashboardViewModel
+//    private lateinit var
 
     override fun onCreateView(
             inflater: LayoutInflater,
@@ -23,8 +24,6 @@ class DashboardFragment : Fragment() {
                 ViewModelProvider(this).get(DashboardViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_dashboard, container, false)
 //        val textView: TextView = root.findViewById(R.id.text_dashboard)
-//        dashboardViewModel.text.observe(viewLifecycleOwner, Observer {
-//            textView.text = it
 //        })
         return root
     }

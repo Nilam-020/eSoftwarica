@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="#315463"
     android:layout_height="match_parent">
 
     <de.hdodenhof.circleimageview.CircleImageView
@@ -28,7 +29,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/studentAge"
+        android:id="@+id/tvStudentAge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -47,20 +48,21 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="8dp"
         android:text="Address"
+        android:textColor="#ffffff"
         style="@style/studentInfo"
         app:layout_constraintStart_toEndOf="@+id/studentImage"
-        app:layout_constraintTop_toBottomOf="@+id/studentAge" />
+        app:layout_constraintTop_toBottomOf="@+id/tvStudentAge" />
 
     <Button
         android:id="@+id/btnDelete"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
-        android:layout_marginTop="16dp"
-        android:text="Button"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/ic_baseline_delete_24"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/tvStudentName"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -68,15 +70,15 @@
         android:id="@+id/tvEdit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/custom_edit_button"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="4dp"
         android:text="Edit"
-        android:paddingVertical="3dp"
-        android:paddingHorizontal="13dp"
-        android:background="#006304"
         android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.853"
-        app:layout_constraintStart_toEndOf="@+id/studentAge"
+        app:layout_constraintHorizontal_bias="0.85"
+        app:layout_constraintStart_toEndOf="@+id/tvStudentAge"
         app:layout_constraintTop_toBottomOf="@+id/btnDelete" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
