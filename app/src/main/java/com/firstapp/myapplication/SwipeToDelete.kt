@@ -1,8 +1,12 @@
 package com.firstapp.myapplication
 
+import android.R
 import android.content.Context
+
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.RecyclerView
+import it.xabaras.android.recyclerview.swipedecorator.RecyclerViewSwipeDecorator
+
 
 abstract class SwipeToDelete(context: Context, dragDir: Int, swipeDir: Int) :
     ItemTouchHelper.SimpleCallback(dragDir, swipeDir) {
@@ -15,7 +19,8 @@ abstract class SwipeToDelete(context: Context, dragDir: Int, swipeDir: Int) :
     }
 
     override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
-        TODO("Not yet implemented")
+
     }
 
 }
+
