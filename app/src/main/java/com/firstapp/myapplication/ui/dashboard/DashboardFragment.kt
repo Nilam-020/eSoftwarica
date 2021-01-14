@@ -67,6 +67,7 @@ class DashboardFragment : Fragment() {
             when (checkedId) {
                 R.id.rbMale -> {
                     gender = "Male"
+
                 }
                 R.id.rbFemale -> {
                     gender = "Female"

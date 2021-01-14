@@ -35,7 +35,7 @@ class LoginActivity : AppCompatActivity() {
         if (user == "softwarica" && pass == "coventry"){
             val intent=Intent(this,MainActivity::class.java)
             startActivity(intent)
-            Toast.makeText(this,"Logged in Successfully",Toast.LENGTH_LONG).show()
+            Toast.makeText(this,"Login Successfully",Toast.LENGTH_LONG).show()
         }else{
             Toast.makeText(this,"Username or password incorrect",Toast.LENGTH_LONG).show()
         }

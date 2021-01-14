@@ -32,7 +32,7 @@ class StudentAdapter(
             tvStudentAge = view.findViewById(R.id.tvStudentAge)
             gender = view.findViewById(R.id.tvGender)
             tvAddress = view.findViewById(R.id.tvAddress)
-            tvEdit=view.findViewById(R.id.tvEdit)
+            tvEdit = view.findViewById(R.id.tvEdit)
         }
     }
 
@@ -50,13 +50,6 @@ class StudentAdapter(
 
     //update
 
-//    var btnCancel: Button = dialog.findViewById(R.id.btnCancel)
-
-
-//    btnCancel.setOnClickListener
-//    {
-//        dialog.cancel()
-//    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): StudentViewHolder {
         val view = LayoutInflater.from(parent.context)
@@ -78,12 +71,16 @@ class StudentAdapter(
 
         holder.studentImage.setOnClickListener {
 //            val intent=intent(context,DashboardFragment::Class.java)
-            Toast.makeText(context,"student details: \n ${student.studentName}",Toast.LENGTH_LONG).show()
+            Toast.makeText(context, "student details: \n ${student.studentName}", Toast.LENGTH_LONG)
+                .show()
         }
         //update code
         val dialog = Dialog(context)
         dialog.setContentView(R.layout.update_student_detail)
-        dialog.window!!.setLayout(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.WRAP_CONTENT)
+        dialog.window!!.setLayout(
+            ViewGroup.LayoutParams.MATCH_PARENT,
+            ViewGroup.LayoutParams.WRAP_CONTENT
+        )
         dialog.setCancelable(false)
         var etName: EditText = dialog.findViewById(R.id.etName)
         var etAge: EditText = dialog.findViewById(R.id.etAge)
@@ -91,9 +88,10 @@ class StudentAdapter(
         var etUrl: EditText = dialog.findViewById(R.id.etUrl)
         var radioGroup: RadioGroup = dialog.findViewById(R.id.radioGroup)
         var btnUpdate: Button = dialog.findViewById(R.id.btnUpdate)
+        var btnCancel: ImageView = dialog.findViewById(R.id.btnCancel)
         var gender = ""
 
-        holder.tvEdit.setOnClickListener{
+        holder.tvEdit.setOnClickListener {
             etUrl.setText(student.studentImage)
             etName.setText(student.studentName.toString())
             etAge.setText(student.studentAge.toString())
@@ -105,11 +103,11 @@ class StudentAdapter(
             }
             dialog.show()
         }
-        radioGroup.setOnCheckedChangeListener{
-                group, checkedId ->
+        radioGroup.setOnCheckedChangeListener { group, checkedId ->
             when (checkedId) {
                 R.id.rbMale -> {
                     gender = "Male"
+
                 }
                 R.id.rbFemale -> {
                     gender = "Female"
@@ -119,7 +117,7 @@ class StudentAdapter(
                 }
             }
         }
-        btnUpdate.setOnClickListener{
+        btnUpdate.setOnClickListener {
             if (TextUtils.isEmpty(etName.text)) {
                 etName.error = "Enter Firstname"
                 etName.requestFocus()
@@ -141,6 +139,11 @@ class StudentAdapter(
                 notifyDataSetChanged()
                 dialog.cancel()
             }
+        }
+
+
+        btnCancel.setOnClickListener {
+            dialog.cancel()
         }
 
     }
