@@ -39,12 +39,8 @@ class StudentAdapter(
     //for delete
     var deletedMovie = null
     fun del(position: Int) {
-
-
         lstStudents.removeAt(position)
         notifyDataSetChanged()
-
-
         Toast.makeText(context, "Student removed", Toast.LENGTH_SHORT).show()
     }
 
